@@ -1,0 +1,29 @@
+{{ block title }}Your Social Circle{{ endblock }}
+
+{{ block styles }}
+<link rel="stylesheet" href="{{ static 'main.css' }}" />
+{{ endblock }}
+
+{{ block content }}
+
+<p>{{ instruction_text }}</p>
+
+<div class="blue-instructions">{{ reminder }}</div>
+
+<p>{{ instruction_text2 }}</p>
+
+<div class="contact-form-grid">
+  {{ for f in fields }}
+  <div>
+    <label for="id_{{ f.name }}">{{ f.label }}</label>
+    <input type="text" class="form-control"
+           name="{{ f.name }}" id="id_{{ f.name }}"
+           value="{{ f.value }}" maxlength="{{ f.max_length }}"
+           {{ if f.required }}required{{ endif }} />
+  </div>
+  {{ endfor }}
+</div>
+
+{{ next_button }}
+
+{{ endblock }}

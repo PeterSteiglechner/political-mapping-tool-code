@@ -14,3 +14,6 @@ wave2
 figs/
 processed_data
 .DS_Store
+minimal_survey/__pycache__
+minimal_survey/pmtool/__pycache__
+minimal_survey/db.sqlite3

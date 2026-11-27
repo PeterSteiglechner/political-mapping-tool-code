@@ -1,0 +1,45 @@
+{{ block title }}Your Personal Political Map{{ endblock }}
+
+{{ block styles }}
+<link rel="stylesheet" href="{{ static 'main.css' }}" />
+{{ endblock }}
+
+{{ block content }}
+
+<p>
+  Imagine you, the {{ n_contacts }} people representing your social circle, and the
+  {{ n_voters }} typical voters of the German parties are in a room (the square below).
+</p>
+
+<div class="yellow-instructions">
+  <p>
+   Arrange the people in the room based on how <em>you</em> see their views on the political questions from the beginning of this survey:
+  </p>
+  <ul>
+    <li><strong>Place individuals closer together if you perceive them as politically similar.</strong></li>
+    <li><strong>Place individuals farther apart if you perceive them as politically different.</strong></li>
+  </ul>
+</div>
+
+<p>There are NO right or wrong answers. We are interested in your personal perception.</p>
+
+<canvas id="dragCanvas"
+        style="display: block; touch-action: none; background: #fff; max-width: 100%"></canvas>
+
+<input type="hidden" name="positions" id="positions" />
+
+<div class="red-instructions">
+  All dots must be within the square boundary to proceed. You can re-position any dot at any time until you are satisfied with the arrangement.
+</div>
+
+{{ next_button }}
+
+{{ endblock }}
+
+{{ block scripts }}
+<script>
+  window.PM_CONFIG = {{ config_json|safe }};
+</script>
+<script src="{{ static 'colors.js' }}"></script>
+<script src="{{ static 'map.js' }}"></script>
+{{ endblock }}

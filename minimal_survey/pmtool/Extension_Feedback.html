@@ -1,0 +1,44 @@
+{{ block title }}Your Political Map: Quick Look{{ endblock }}
+
+{{ block styles }}
+<link rel="stylesheet" href="{{ static 'main.css' }}" />
+{{ endblock }}
+
+{{ block content }}
+
+<p>
+  You placed {{ n_dots }} dots, which gives {{ n_pairs }} pairwise map distances
+  (measured in units of the canvas diagonal).
+</p>
+
+<h4>Map distance between you and each typical voter</h4>
+<table class="survey-table-clean">
+  {{ for r in voter_rows }}
+  <tr>
+    <td style="width: 25%">{{ r.name }}</td>
+    <td style="width: 10%">{{ r.dist }}</td>
+    <td>
+      <div class="bar-outer"><div class="bar-inner" style="width: {{ r.pct }}%"></div></div>
+    </td>
+  </tr>
+  {{ endfor }}
+</table>
+
+<h4 style="margin-top: 2em">Issue-distance associations</h4>
+<p>
+  Correlation, across all target pairs on your map, between map distance and the
+  perceived belief difference on that issue. Higher values mean the issue
+  explains more of how you arranged people.
+</p>
+<table class="survey-table-clean">
+  {{ for r in alpha_rows }}
+  <tr><td style="width: 35%">{{ r.issue }}</td><td>{{ r.alpha }}</td></tr>
+  {{ endfor }}
+</table>
+
+<p style="margin-top: 2em; color: #777">
+  Raw data (including all dot positions as JSON) is in the oTree admin under
+  <em>Data</em>.
+</p>
+
+{{ endblock }}
