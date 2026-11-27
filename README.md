@@ -1,6 +1,6 @@
 # Political Mapping Tool: Analysis Code
 
-Code for the survey analyses in the manuscript on the Political Mapping Tool. It covers a two-wave survey (Germany, 2026) with belief ratings and spatial-arrangement maps. The survey tool itself (oTree) is not part of this repo.
+Code for the survey analyses in the manuscript on the Political Mapping Tool. It covers a two-wave survey (Germany, 2026) with belief ratings and spatial-arrangement maps. A stripped down version of the survey tool is in folder `minimal_survey` with its own `README_SURVEY.md`.
 
 ## Pipeline
 
