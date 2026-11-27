@@ -273,14 +273,14 @@ fig = plt.figure(figsize=(9/2.54, 3/2.54))
 ax = plt.axes()
 diff_days = (surveycompletiontimes[2] -surveycompletiontimes[1]).dt.days
 diff_days.plot.hist(bins=np.arange(0.5,121,1), ax=ax, edgecolor="w", linewidth=0.2)
-ax.set_ylabel("participants")
-ax.set_xlabel("days between completing wave 1 and wave 2")
+ax.set_ylabel(r"participants")
+ax.set_xlabel(r"time between completing wave 1 and wave 2 in days")
 ax.set_xticks([k*7 for k in range(144)])
 ax.set_xlim(0,max(diff_days))
 ax.axvline(np.median(diff_days), ls="--", color="grey")
 ax.text(diff_days.median()+4, 100, "median", ha="left")
 fig.subplots_adjust(bottom=0.3, right=0.99, top=0.99)
-plt.savefig("figs/t_between_waves.png", dpi=300)
+plt.savefig("figs/t_between_waves.png", dpi=600)
 print("saved file ", "figs/t_between_waves.png")
 
 
@@ -391,7 +391,7 @@ for w in [1,2]:
         ax.set_xticklabels(np.linspace(-1,1,5)[::2].astype(int), fontsize=smallfs)
 
     axes[-2].set_xlabel("own beliefs"+("" if w==1 else " (wave 2)"), fontsize=smallfs)
-    fig.subplots_adjust(left=0.02, right=0.98,top=0.98, bottom=0.2, wspace=0.1)
+    fig.subplots_adjust(left=0.02, right=0.98,top=0.98, bottom=0.22, wspace=0.1)
     plt.savefig(f"figs/ownOps_wave{w}.png", dpi=600)
     print("saved figure ", f"figs/ownOps_wave{w}.png",)
 #%%
@@ -457,7 +457,7 @@ for ax, (_, d) in zip(axs.flatten(), sel.iterrows()):
     ax.scatter(*pos.loc["self"], c="magenta", marker="X", s=8, zorder=11)
 
     ax.set_aspect("equal")
-    # ax.set_xlim(1,0)
+    ax.set_xlim(0,1)
     ax.set_ylim(1,0)
     ax.set_xlabel("")
     ax.set_ylabel("")

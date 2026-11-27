@@ -1,0 +1,56 @@
+moderate R2 = 0.78
+{'pearson_r': np.float64(0.8841143286461899), 'spearman_rho': np.float64(0.8851994851994852), 'median_abs_err': np.float64(0.05354426116750974), 'median_rel_err': np.float64(0.17065320161584818), 'share_within_15pct': np.float64(0.4444444444444444)}
+left R2 = 0.82
+{'pearson_r': np.float64(0.9071173759429563), 'spearman_rho': np.float64(0.8839124839124839), 'median_abs_err': np.float64(0.04952177458249962), 'median_rel_err': np.float64(0.15769175371433475), 'share_within_15pct': np.float64(0.3888888888888889)}
+right R2 = 0.80
+{'pearson_r': np.float64(0.8957030669583327), 'spearman_rho': np.float64(0.870785070785071), 'median_abs_err': np.float64(0.04961824744096502), 'median_rel_err': np.float64(0.14239566521858257), 'share_within_15pct': np.float64(0.5)}
+left 0.23
+moderate 0.31
+right 0.36
+      measure    group      voter   n  mean_gap     lo     hi     p  p_holm
+   d_centroid     left        AfD 433     0.103  0.092  0.114 0.000   0.000
+   d_centroid     left        BSW 433     0.072  0.061  0.084 0.000   0.000
+   d_centroid     left    CDU/CSU 433     0.079  0.069  0.090 0.000   0.000
+   d_centroid     left        FDP 433     0.080  0.069  0.090 0.000   0.000
+   d_centroid     left GreenParty 433     0.007 -0.004  0.019 0.822   1.000
+   d_centroid     left  LeftParty 433     0.011 -0.001  0.023 0.104   0.626
+   d_centroid     left        SPD 433     0.039  0.028  0.051 0.000   0.000
+   d_centroid moderate        AfD 410     0.063  0.052  0.076 0.000   0.000
+   d_centroid moderate        BSW 410     0.079  0.068  0.090 0.000   0.000
+   d_centroid moderate    CDU/CSU 410     0.052  0.039  0.066 0.000   0.000
+   d_centroid moderate        FDP 410     0.065  0.054  0.076 0.000   0.000
+   d_centroid moderate GreenParty 410     0.037  0.025  0.049 0.000   0.000
+   d_centroid moderate  LeftParty 410     0.080  0.069  0.091 0.000   0.000
+   d_centroid moderate        SPD 410     0.060  0.049  0.071 0.000   0.000
+   d_centroid    right        AfD 422     0.006 -0.005  0.017 0.339   1.000
+   d_centroid    right        BSW 422     0.087  0.076  0.098 0.000   0.000
+   d_centroid    right    CDU/CSU 422     0.041  0.030  0.052 0.000   0.000
+   d_centroid    right        FDP 422     0.049  0.039  0.059 0.000   0.000
+   d_centroid    right GreenParty 422     0.062  0.051  0.072 0.000   0.000
+   d_centroid    right  LeftParty 422     0.081  0.070  0.091 0.000   0.000
+   d_centroid    right        SPD 422     0.080  0.069  0.091 0.000   0.000
+d_meancontact     left        AfD 433     0.083  0.072  0.094 0.000   0.000
+d_meancontact     left        BSW 433     0.044  0.034  0.055 0.000   0.000
+d_meancontact     left    CDU/CSU 433     0.045  0.035  0.056 0.000   0.000
+d_meancontact     left        FDP 433     0.051  0.040  0.061 0.000   0.000
+d_meancontact     left GreenParty 433    -0.032 -0.043 -0.021 0.000   0.000
+d_meancontact     left  LeftParty 433    -0.024 -0.036 -0.013 0.000   0.000
+d_meancontact     left        SPD 433    -0.003 -0.014  0.007 0.325   1.000
+d_meancontact moderate        AfD 410     0.038  0.026  0.050 0.000   0.000
+d_meancontact moderate        BSW 410     0.051  0.039  0.062 0.000   0.000
+d_meancontact moderate    CDU/CSU 410     0.013  0.001  0.026 0.060   0.423
+d_meancontact moderate        FDP 410     0.032  0.021  0.043 0.000   0.000
+d_meancontact moderate GreenParty 410     0.008 -0.004  0.020 0.478   1.000
+d_meancontact moderate  LeftParty 410     0.051  0.041  0.061 0.000   0.000
+d_meancontact moderate        SPD 410     0.023  0.012  0.034 0.000   0.002
+d_meancontact    right        AfD 422    -0.024 -0.036 -0.014 0.000   0.000
+d_meancontact    right        BSW 422     0.059  0.049  0.069 0.000   0.000
+d_meancontact    right    CDU/CSU 422     0.002 -0.009  0.013 0.689   1.000
+d_meancontact    right        FDP 422     0.016  0.006  0.025 0.002   0.019
+d_meancontact    right GreenParty 422     0.038  0.027  0.048 0.000   0.000
+d_meancontact    right  LeftParty 422     0.054  0.044  0.064 0.000   0.000
+d_meancontact    right        SPD 422     0.048  0.038  0.058 0.000   0.000
+[0.15009593 0.15898778 0.16956874]
+left: stress by dim=[0.346 0.187 0.106 0.064 0.047], 2D R²=0.823, null 2D stress 5th pct=0.189, cum.var(classical)=[0.49 0.63 0.74]
+moderate: stress by dim=[0.424 0.213 0.125 0.071 0.05 ], 2D R²=0.782, null 2D stress 5th pct=0.218, cum.var(classical)=[0.34 0.57 0.7 ]
+right: stress by dim=[0.372 0.197 0.112 0.071 0.048], 2D R²=0.802, null 2D stress 5th pct=0.210, cum.var(classical)=[0.44 0.6  0.72]

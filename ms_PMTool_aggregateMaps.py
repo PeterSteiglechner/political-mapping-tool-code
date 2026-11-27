@@ -3,30 +3,20 @@
 #%% -----------------------------------------------------------------------
 import pandas as pd
 import numpy as np
-import seaborn as sns
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D  # noqa: F401  (enables projection="3d")
-import networkx as nx
-from itertools import combinations
 from consts import *
 from sklearn.manifold import MDS
 from scipy.spatial import procrustes
 from scipy.linalg import orthogonal_procrustes
-from matplotlib.patches import FancyArrowPatch
-from adjustText import adjust_text
-from scipy.spatial import distance_matrix
+from scipy.spatial.distance import cdist
 import string 
-
 from ms_utils import *
 from scipy.stats import wilcoxon
 from statsmodels.stats.multitest import multipletests
-
 from matplotlib.patches import Ellipse
 from scipy.spatial import ConvexHull
 
-from matplotlib.colors import ListedColormap
 
-import matplotlib.patheffects as path_effects
 bigfs, smallfs, tinyfs = 9, 7, 6
 plt.rcParams.update({"font.size": smallfs, "figure.figsize": (16/2.54, 9/2.54)})
 plt.rcParams.update({"xtick.labelsize":smallfs})
@@ -204,14 +194,14 @@ def draw_hull(ax, pts, color, alpha=0.2):
     ax.fill(pts[hull.vertices, 0], pts[hull.vertices, 1], color=color, alpha=alpha, lw=0, zorder=0)
 
 def r2(D, coords):
-    d = distance_matrix(coords, coords)
+    d = cdist(coords, coords)
     iu = np.triu_indices_from(D, k=1)
     return np.corrcoef(D[iu], d[iu])[0, 1] ** 2
 
 from scipy.stats import spearmanr
 
 def human_fit(D, coords):
-    d = distance_matrix(coords, coords)
+    d = cdist(coords, coords)
     iu = np.triu_indices_from(D, k=1)
     obs, fit = D[iu], d[iu]
     rel_err = np.abs(fit - obs) / obs
@@ -249,7 +239,7 @@ for col, title, g, incldots in [columns[1],columns[0],columns[2]]:
         else:
             R, ref_mean, coords_mean = fit_rotation(ref_coords[d], coords[shared_idx])
             coords = apply_rotation(coords, R, ref_mean, coords_mean)
-        allDistances[(g,d)] = distance_matrix(coords, coords)
+        allDistances[(g,d)] = cdist(coords, coords)
         r2val = r2(D, coords)
         print(f"{title} R2 = {r2val:.2f}")
         print(human_fit(D, coords))
@@ -324,12 +314,12 @@ from scipy.spatial.distance import squareform
 
 def stress1(D, coords):
     """Kruskal stress-1 for metric MDS: sqrt(sum (D - d)^2 / sum d^2)."""
-    d = distance_matrix(coords, coords)
+    d = cdist(coords, coords)
     iu = np.triu_indices_from(D, k=1)
     return np.sqrt(((D[iu] - d[iu])**2).sum() / (D[iu]**2).sum())
 
 def shepard_r2(D, coords):
-    d = distance_matrix(coords, coords)
+    d = cdist(coords, coords)
     iu = np.triu_indices_from(D, k=1)
     return np.corrcoef(D[iu], d[iu])[0, 1] ** 2
 

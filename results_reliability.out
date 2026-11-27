@@ -1,0 +1,128 @@
+###########################
+# Load Data 
+###########################
+
+###########################
+# Test Retest Pooled/PerPair 
+###########################
+
+test-retest r, self-to-voter: 0.62
+test-retest r, between-voter: 0.40
+test-retest r, all pairs including voters: 0.46
+ICC(A,1) self-to-voter:  0.62
+ICC(A,1) between-voter: 0.40
+
+self-to-voter, per party
+ | dot2       |   n |    r |   icc |
+|:-----------|----:|-----:|------:|
+| AfD        | 986 | 0.69 |  0.69 |
+| GreenParty | 986 | 0.67 |  0.66 |
+| LeftParty  | 986 | 0.64 |  0.64 |
+| SPD        | 986 | 0.59 |  0.59 |
+| CDU/CSU    | 986 | 0.58 |  0.58 |
+| BSW        | 986 | 0.56 |  0.56 |
+| FDP        | 986 | 0.48 |  0.48 |
+
+between-voter, per party pair
+ | dot1       | dot2       |   n |    r |   icc |
+|:-----------|:-----------|----:|-----:|------:|
+| LeftParty  | AfD        | 986 | 0.46 |  0.46 |
+| LeftParty  | CDU/CSU    | 986 | 0.45 |  0.45 |
+| GreenParty | AfD        | 986 | 0.44 |  0.44 |
+| BSW        | SPD        | 986 | 0.39 |  0.39 |
+| CDU/CSU    | AfD        | 986 | 0.38 |  0.38 |
+| SPD        | AfD        | 986 | 0.38 |  0.38 |
+| BSW        | CDU/CSU    | 986 | 0.37 |  0.37 |
+| LeftParty  | FDP        | 986 | 0.37 |  0.37 |
+| BSW        | LeftParty  | 986 | 0.36 |  0.36 |
+| BSW        | AfD        | 986 | 0.36 |  0.36 |
+| GreenParty | CDU/CSU    | 986 | 0.35 |  0.35 |
+| GreenParty | FDP        | 986 | 0.35 |  0.35 |
+| BSW        | GreenParty | 986 | 0.35 |  0.35 |
+| LeftParty  | SPD        | 986 | 0.33 |  0.33 |
+| FDP        | AfD        | 986 | 0.33 |  0.33 |
+| SPD        | CDU/CSU    | 986 | 0.33 |  0.33 |
+| LeftParty  | GreenParty | 986 | 0.32 |  0.32 |
+| SPD        | FDP        | 986 | 0.29 |  0.29 |
+| SPD        | GreenParty | 986 | 0.29 |  0.29 |
+| FDP        | CDU/CSU    | 986 | 0.28 |  0.28 |
+| BSW        | FDP        | 986 | 0.27 |  0.27 |
+saved figure  figs/reliability_both.png
+###########################
+# Individual Stability 
+###########################
+
+
+== raw (n=986) ==
+own profile is the best match: 34 of 986 participants (0.034; chance 0.001)
+within r: 0.426  95% CI [0.399, 0.454]
+between r: 0.096  95% CI [0.089, 0.101]
+difference (z): 0.359  95% CI [0.328, 0.393]
+percentile rank: 0.730  95% CI [0.712, 0.748]
+top-1 accuracy: 0.034  95% CI [0.024, 0.047]
+
+== center_pairs (n=986) ==
+own profile is the best match: 35 of 986 participants (0.035; chance 0.001)
+within r: 0.376  95% CI [0.350, 0.404]
+between r: 0.006  95% CI [0.005, 0.006]
+difference (z): 0.390  95% CI [0.360, 0.423]
+percentile rank: 0.749  95% CI [0.733, 0.766]
+top-1 accuracy: 0.035  95% CI [0.025, 0.048]
+###########################
+# Time between waves
+###########################
+
+
+delay between waves (days): median=21, range=13-117
+delay <=28d (n=713): r self-voter = 0.64, r between-voter = 0.41
+delay >28d (n=273): r self-voter = 0.58, r between-voter = 0.37
+###########################
+# Consistency 
+###########################
+
+wave 1 split-half SB r = 0.985, 95% bootstrap CI = [0.969 0.993]
+wave 2 split-half SB r = 0.982, 95% bootstrap CI = [0.963 0.992]
+wave 1 pairwise reliability: 0.081 ± 0.264
+fisher z-scale: 0.094
+wave 2 pairwise reliability: 0.088 ± 0.268
+fisher z-scale: 0.101
+reliability between groups
+|    | g1       | g2    |   r_between |    lo |    hi |   ceiling |   rmsd |
+|---:|:---------|:------|------------:|------:|------:|----------:|-------:|
+|  0 | moderate | right |       0.917 | 0.84  | 0.941 |     0.974 |  0.019 |
+|  1 | moderate | left  |       0.758 | 0.66  | 0.82  |     0.978 |  0.042 |
+|  2 | right    | left  |       0.779 | 0.691 | 0.835 |     0.981 |  0.04  |
+permutation p (group profiles differ): 0.0004997501249375312
+###########################
+# Consistency between groups Figure 
+###########################
+
+wave 1
+\begin{tabular}{lrr}
+\toprule
+Party 2 & moderate & right \\
+Party 1 &  &  \\
+\midrule
+left & 0.76 & 0.78 \\
+moderate &  & 0.92 \\
+\bottomrule
+\end{tabular}
+
+saved figure  figs/correlation_betweenVoter_LR.png
+wave 1
+\begin{tabular}{lrrrrrrr}
+\toprule
+Party 2 & BSW & LeftParty & SPD & GreenParty & FDP & CDU/CSU & AfD \\
+Party 1 &  &  &  &  &  &  &  \\
+\midrule
+BSW &  & 0.66 & 0.50 & 0.68 & 0.72 & 0.70 & 0.79 \\
+LeftParty &  &  & 0.42 & 0.85 & 0.60 & 0.40 & 0.59 \\
+SPD &  &  &  & 0.71 & 0.51 & 0.48 & 0.68 \\
+GreenParty &  &  &  &  & 0.68 & 0.51 & 0.71 \\
+FDP &  &  &  &  &  & 0.69 & 0.70 \\
+CDU/CSU &  &  &  &  &  &  & 0.61 \\
+AfD &  &  &  &  &  &  &  \\
+\bottomrule
+\end{tabular}
+
+saved figure  figs/correlation_betweenVoter_Party.png

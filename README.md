@@ -2,6 +2,8 @@
 
 Code for the survey analyses in the manuscript on the Political Mapping Tool. It covers a two-wave survey (Germany, 2026) with belief ratings and spatial-arrangement maps. A stripped down version of the survey tool is in folder `minimal_survey` with its own `README_SURVEY.md`.
 
+<img src="" alt="">
+
 ## Pipeline
 
 We included two scripts, `01_createdatafile.py` and `02_preprocessData.py`, for transparency to show (1) how we integrated the raw oTree exports of both waves, combined it with the Bilendi prescreener, merged them, and flagged exclusions and (2) how we build the participant-level table (identity, beliefs, positions, timings, ratings) and the pair-level table (map distances, belief differences, pairwise similarity, voter likeability).
@@ -25,13 +27,26 @@ Supporting modules:
 
 Python 3.12 or newer is needed, because some f-strings reuse the same quote type.
 
+This project uses [uv](https://docs.astral.sh/uv/) to manage python packages (see the [uv installation guide](https://docs.astral.sh/uv/getting-started/installation/))
+
 ```bash
-pip install numpy pandas scipy statsmodels scikit-learn seaborn matplotlib \
+uv sync
+``` 
+
+or 
+
+```bash
+uv init 
+uv add numpy pandas scipy statsmodels scikit-learn seaborn matplotlib \
             pingouin adjustText networkx pyreadstat openpyxl tabulate
+```
+`MDS(init="classical_mds")` requires a recent scikit-learn `>=1.9`.
+
+
+```bash
 mkdir -p processed_data figs
 ```
 
-`MDS(init="classical_mds")` requires a recent scikit-learn `>=1.9`.
 
 ## Data
 

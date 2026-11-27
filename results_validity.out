@@ -1,0 +1,315 @@
+###########################
+# Load Data 
+###########################
+
+pixel_dist range (min, 99%, max): 0.0 0.771 0.945
+###########################
+# Concurrent Validity 
+###########################
+
+$r_{\rm all}=0.48$
+$r(d_{S,v}, \delta_{S,v})=0.61$
+$r({\overline{d_{vw}}, \overline{\delta_{vw}}})=0.78$
+$r=0.57$
+$r=0.77$
+saved figure:  figs/correlation_pairwiseD_side_by_side.png
+map distance ~ dissimilarity, wave 1, all 18 pairs {'r': 0.536, 'ci95': (0.518, 0.554), 'share_positive': 0.899, 'n_participants': 1259}
+map distance ~ dissimilarity, wave 1, 16 random pairs only {'r': 0.496, 'ci95': (0.477, 0.514), 'share_positive': 0.89, 'n_participants': 1259}
+self-voter distance ~ aversion, wave 2: {'r': 0.749, 'ci95': (0.728, 0.769), 'share_positive': 0.918, 'n_participants': 994}
+comparison figure dissimilarity wave 1 and wave 2:
+$r_{\rm all}=0.48$
+$r(d_{S,v}, \delta_{S,v})=0.61$
+$r({\overline{d_{vw}}, \overline{\delta_{vw}}})=0.78$
+$r_{\rm all}=0.50$
+$r(d_{S,v}, \delta_{S,v})=0.59$
+$r({\overline{d_{vw}}, \overline{\delta_{vw}}})=0.83$
+saved figure:  figs/correlation_pairwiseD_wave1vswave2.png
+###########################
+# Concurrent Validity 2: Distributions only 
+###########################
+
+saved figure:  figs/dists_pairwiseDissim_mapDist_dislike_closeness.png
+###########################
+# H1H4 
+###########################
+
+=== H1 w1 preregistered ===  N obs=7035, N part=1005, intercept only, converged=True
+  est=-0.255 SE=0.005 z=-48.85 95% CI=[-0.265, -0.245]  p(one-sided)=<0.001  p(two-sided)=<0.001  SD(u)=0.113 SD(res)=0.153  ICC=0.35
+
+=== H1 w2 preregistered ===  N obs=5614, N part=802, intercept only, converged=True
+  est=-0.251 SE=0.006 z=-44.21 95% CI=[-0.263, -0.240]  p(one-sided)=<0.001  p(two-sided)=<0.001  SD(u)=0.109 SD(res)=0.149  ICC=0.35
+
+=== H2 preregistered ===  N obs=7000, N part=1000, intercept only, converged=True
+  est=-1.106 SE=0.017 z=-65.96 95% CI=[-1.138, -1.073]  p(one-sided)=<0.001  p(two-sided)=<0.001  SD(u)=0.139 SD(res)=0.225  ICC=0.28
+
+=== H2 + voter FE ===  N obs=7000, N part=1000, intercept only, converged=True
+  est=-1.089 SE=0.017 z=-63.69 95% CI=[-1.123, -1.056]  p(one-sided)=<0.001  p(two-sided)=<0.001  SD(u)=0.138 SD(res)=0.223  ICC=0.28
+
+=== H2 + voter FE, random slope ===  N obs=7000, N part=1000, intercept+slope, converged=True
+  est=-1.180 SE=0.022 z=-53.05 95% CI=[-1.223, -1.136]  p(one-sided)=<0.001  p(two-sided)=<0.001  SD(u)=0.049 SD(res)=0.216
+
+=== H3 w1 preregistered (all 18 pairs) ===  N obs=22770, N part=1265, intercept only, converged=True
+  est=-0.754 SE=0.008 z=-89.27 95% CI=[-0.771, -0.738]  p(one-sided)=<0.001  p(two-sided)=<0.001  SD(u)=0.108 SD(res)=0.245  ICC=0.16
+
+=== H3 w1 16 random pairs only ===  N obs=20240, N part=1265, intercept only, converged=True
+  est=-0.793 SE=0.010 z=-78.12 95% CI=[-0.813, -0.773]  p(one-sided)=<0.001  p(two-sided)=<0.001  SD(u)=0.112 SD(res)=0.240  ICC=0.18
+
+=== H4 w1 === n=1265: sim(min-dist pair)=0.70 (SD 0.27), sim(max-dist pair)=0.23 (SD 0.28)
+  mean diff=0.469 95% CI=[0.447, 0.491], d_z=1.17, t(1264)=41.49, p(one-sided)=<0.001, Wilcoxon p(one-sided)=<0.001
+
+=== H4 w2 === n=1000: sim(min-dist pair)=0.72 (SD 0.27), sim(max-dist pair)=0.23 (SD 0.28)
+  mean diff=0.488 95% CI=[0.463, 0.513], d_z=1.22, t(999)=38.65, p(one-sided)=<0.001, Wilcoxon p(one-sided)=<0.001
+
+| test                               |   n_obs |   n_part |      b |    se |     lo |     hi |       z |   p_one |   p_two |    sd_u |   sd_res |     icc |   converged |
+|:-----------------------------------|--------:|---------:|-------:|------:|-------:|-------:|--------:|--------:|--------:|--------:|---------:|--------:|------------:|
+| H1 w1 preregistered                |    7035 |     1005 | -0.255 | 0.005 | -0.265 | -0.245 | -48.851 |       0 |       0 |   0.113 |    0.153 |   0.352 |           1 |
+| H1 w2 preregistered                |    5614 |      802 | -0.251 | 0.006 | -0.263 | -0.24  | -44.21  |       0 |       0 |   0.109 |    0.149 |   0.349 |           1 |
+| H2 preregistered                   |    7000 |     1000 | -1.106 | 0.017 | -1.138 | -1.073 | -65.958 |       0 |       0 |   0.139 |    0.225 |   0.277 |           1 |
+| H2 + voter FE                      |    7000 |     1000 | -1.089 | 0.017 | -1.123 | -1.056 | -63.695 |       0 |       0 |   0.138 |    0.223 |   0.278 |           1 |
+| H2 + voter FE, random slope        |    7000 |     1000 | -1.18  | 0.022 | -1.223 | -1.136 | -53.052 |       0 |       0 |   0.049 |    0.216 | nan     |           1 |
+| H3 w1 preregistered (all 18 pairs) |   22770 |     1265 | -0.754 | 0.008 | -0.771 | -0.738 | -89.27  |       0 |       0 |   0.108 |    0.245 |   0.164 |           1 |
+| H3 w1 16 random pairs only         |   20240 |     1265 | -0.793 | 0.01  | -0.813 | -0.773 | -78.124 |       0 |       0 |   0.112 |    0.24  |   0.179 |           1 |
+| H4 w1 (paired t)                   |    1265 |     1265 |  0.469 | 0.011 |  0.447 |  0.491 |  41.491 |       0 |       0 | nan     |  nan     | nan     |         nan |
+| H4 w2 (paired t)                   |    1000 |     1000 |  0.488 | 0.013 |  0.463 |  0.513 |  38.645 |       0 |       0 | nan     |  nan     | nan     |         nan |
+###########################
+# External Validity: Hate Matrix 
+###########################
+
+Greens perceived by Left: -0.66 (SD=0.68) Left perceived by Greens: -0.26 (SD=0.92)
+corr of the two matrices: PearsonRResult(statistic=np.float64(0.9614578602603756), pvalue=np.float64(5.309173120137422e-28))
+       abs-dislike  abs-distance
+count    49.000000     49.000000
+mean      0.543109      0.410354
+std       0.383054      0.347357
+min       0.001329      0.016546
+25%       0.246133      0.088033
+50%       0.448597      0.295113
+75%       0.747213      0.593928
+max       1.374728      1.182519
+###########################
+# External Validity: Hate Matrix -- Asymmetry 
+###########################
+
+       map distance    dist_lo    dist_hi   aversion    disl_lo    disl_hi
+count     10.000000  10.000000  10.000000  10.000000  10.000000  10.000000
+mean      -0.001761  -0.196433   0.203081   0.090139  -0.074883   0.260519
+std        0.219428   0.232524   0.215428   0.193514   0.205075   0.182605
+min       -0.407503  -0.625270  -0.190815  -0.264856  -0.450861  -0.091025
+25%       -0.154694  -0.375199   0.063913   0.072031  -0.108739   0.246732
+50%        0.014317  -0.165111   0.200902   0.165437   0.010224   0.320303
+75%        0.187478   0.007611   0.379639   0.199555   0.069937   0.356915
+max        0.261887   0.047141   0.509436   0.270621   0.107159   0.456728
+corr of asymmetries (map distance vs aversion): PearsonRResult(statistic=np.float64(0.8803507518567565), pvalue=np.float64(0.0007742093792706227))
+saved figure  figs/dislike-distance-asymmetries.png
+        A          B  asym    lo    hi
+LeftParty GreenParty -0.41 -0.63 -0.19
+###########################
+# External Validity: Issue-Distance Association 
+###########################
+
+| op_col                   |    1 |    2 |
+|:-------------------------|-----:|-----:|
+| climate concern          | 0.32 | 0.33 |
+| digital regulation       | 0.2  | 0.21 |
+| economic inequality      | 0.25 | 0.26 |
+| gay marriage             | 0.29 | 0.29 |
+| migrant rights           | 0.32 | 0.34 |
+| recognition East Germans | 0.22 | 0.23 |
+nr undefined alphas: out of n=2265
+| op_col                   |   left |   moderate |   right |
+|:-------------------------|-------:|-----------:|--------:|
+| climate concern          |      4 |          2 |       0 |
+| digital regulation       |      3 |          0 |       1 |
+| economic inequality      |      4 |          2 |       0 |
+| gay marriage             |      3 |          1 |       0 |
+| migrant rights           |      4 |          0 |       3 |
+| recognition East Germans |      3 |          1 |       2 |
+|        |   count |
+|:-------|--------:|
+| (1, 0) |    1253 |
+| (1, 1) |       8 |
+| (1, 2) |       2 |
+| (1, 6) |       1 |
+| (1, 3) |       1 |
+| (2, 0) |     993 |
+| (2, 1) |       6 |
+| (2, 6) |       1 |
+###########################
+# External Validity: Issue-Distance Association Reliability 
+###########################
+
+|    | issue                    |   n |   pearson |   spearman |   ICC_A1 |
+|---:|:-------------------------|----:|----------:|-----------:|---------:|
+|  0 | climate concern          | 982 |      0.56 |       0.56 |     0.56 |
+|  1 | digital regulation       | 983 |      0.39 |       0.34 |     0.39 |
+|  2 | economic inequality      | 983 |      0.48 |       0.45 |     0.48 |
+|  3 | gay marriage             | 984 |      0.53 |       0.53 |     0.53 |
+|  4 | migrant rights           | 981 |      0.53 |       0.53 |     0.53 |
+|  5 | recognition East Germans | 982 |      0.39 |       0.36 |     0.39 |
+alpha profile across issues (within person, wave 1 vs 2): {'r': 0.375, 'ci95': (0.334, 0.413), 'share_positive': 0.734, 'n_participants': 985}
+###########################
+# External Validity: Issue-Distance Association Explanation 
+###########################
+
+saved figure  figs/issue-distance-association-example.png
+###########################
+# External Validity: Issue-Distance Association by LR 
+###########################
+
+saved figure  figs/issue_weights_lr3_w12.png
+saved figure  figs/issue_weights_lr3_w12_strip.png
+wave 1
+\begin{tabular}{lllrrll}
+\toprule
+question & group1 & group2 & mean1 & mean2 & mean diff. [CI] & Cohen's $d$ [CI] \\
+\midrule
+climate concern & left & moderate & 0.38 & 0.28 & 0.10 [0.05, 0.14] & 0.37 [0.20, 0.53] \\
+climate concern & left & right & 0.38 & 0.28 & 0.10 [0.06, 0.15] & 0.37 [0.21, 0.54] \\
+climate concern & moderate & right & 0.28 & 0.28 & 0.00 [$-$0.04, 0.05] & 0.01 [$-$0.16, 0.17] \\
+gay marriage & left & moderate & 0.38 & 0.26 & 0.12 [0.08, 0.17] & 0.46 [0.29, 0.62] \\
+gay marriage & left & right & 0.38 & 0.23 & 0.15 [0.11, 0.19] & 0.56 [0.40, 0.73] \\
+gay marriage & moderate & right & 0.26 & 0.23 & 0.03 [$-$0.02, 0.07] & 0.10 [$-$0.06, 0.27] \\
+migrant rights & left & moderate & 0.36 & 0.27 & 0.09 [0.04, 0.13] & 0.34 [0.17, 0.50] \\
+migrant rights & left & right & 0.36 & 0.34 & 0.02 [$-$0.03, 0.06] & 0.07 [$-$0.10, 0.23] \\
+migrant rights & moderate & right & 0.27 & 0.34 & $-$0.07 [$-$0.11, $-$0.03] & $-$0.26 [$-$0.43, $-$0.09] \\
+economic inequality & left & moderate & 0.30 & 0.22 & 0.08 [0.04, 0.12] & 0.31 [0.14, 0.48] \\
+economic inequality & left & right & 0.30 & 0.23 & 0.07 [0.03, 0.12] & 0.30 [0.13, 0.46] \\
+economic inequality & moderate & right & 0.22 & 0.23 & $-$0.01 [$-$0.05, 0.04] & $-$0.02 [$-$0.19, 0.15] \\
+digital regulation & left & moderate & 0.21 & 0.19 & 0.03 [$-$0.01, 0.07] & 0.11 [$-$0.05, 0.28] \\
+digital regulation & left & right & 0.21 & 0.20 & 0.01 [$-$0.03, 0.05] & 0.04 [$-$0.12, 0.21] \\
+digital regulation & moderate & right & 0.19 & 0.20 & $-$0.02 [$-$0.06, 0.03] & $-$0.07 [$-$0.23, 0.10] \\
+recognition East Germans & left & moderate & 0.20 & 0.22 & $-$0.02 [$-$0.05, 0.02] & $-$0.07 [$-$0.23, 0.10] \\
+recognition East Germans & left & right & 0.20 & 0.23 & $-$0.02 [$-$0.06, 0.02] & $-$0.09 [$-$0.26, 0.07] \\
+recognition East Germans & moderate & right & 0.22 & 0.23 & $-$0.01 [$-$0.05, 0.04] & $-$0.03 [$-$0.19, 0.14] \\
+\bottomrule
+\end{tabular}
+
+wave 2
+\begin{tabular}{lllrrll}
+\toprule
+question & group1 & group2 & mean1 & mean2 & mean diff. [CI] & Cohen's $d$ [CI] \\
+\midrule
+climate concern & left & moderate & 0.41 & 0.28 & 0.13 [0.08, 0.18] & 0.49 [0.30, 0.68] \\
+climate concern & left & right & 0.41 & 0.29 & 0.12 [0.07, 0.17] & 0.45 [0.27, 0.64] \\
+climate concern & moderate & right & 0.28 & 0.29 & $-$0.01 [$-$0.06, 0.04] & $-$0.04 [$-$0.22, 0.15] \\
+gay marriage & left & moderate & 0.38 & 0.27 & 0.11 [0.06, 0.15] & 0.40 [0.21, 0.59] \\
+gay marriage & left & right & 0.38 & 0.24 & 0.14 [0.09, 0.19] & 0.53 [0.34, 0.72] \\
+gay marriage & moderate & right & 0.27 & 0.24 & 0.03 [$-$0.01, 0.08] & 0.13 [$-$0.06, 0.32] \\
+migrant rights & left & moderate & 0.37 & 0.31 & 0.07 [0.02, 0.12] & 0.25 [0.06, 0.44] \\
+migrant rights & left & right & 0.37 & 0.33 & 0.05 [$-$0.01, 0.10] & 0.16 [$-$0.02, 0.35] \\
+migrant rights & moderate & right & 0.31 & 0.33 & $-$0.02 [$-$0.07, 0.03] & $-$0.08 [$-$0.26, 0.11] \\
+economic inequality & left & moderate & 0.31 & 0.25 & 0.07 [0.02, 0.12] & 0.27 [0.08, 0.46] \\
+economic inequality & left & right & 0.31 & 0.21 & 0.10 [0.05, 0.15] & 0.39 [0.21, 0.58] \\
+economic inequality & moderate & right & 0.25 & 0.21 & 0.03 [$-$0.02, 0.08] & 0.13 [$-$0.06, 0.31] \\
+digital regulation & left & moderate & 0.23 & 0.20 & 0.03 [$-$0.01, 0.08] & 0.13 [$-$0.06, 0.31] \\
+digital regulation & left & right & 0.23 & 0.20 & 0.03 [$-$0.01, 0.08] & 0.13 [$-$0.05, 0.32] \\
+digital regulation & moderate & right & 0.20 & 0.20 & 0.00 [$-$0.05, 0.05] & 0.01 [$-$0.18, 0.19] \\
+recognition East Germans & left & moderate & 0.24 & 0.24 & $-$0.00 [$-$0.04, 0.04] & $-$0.00 [$-$0.19, 0.19] \\
+recognition East Germans & left & right & 0.24 & 0.21 & 0.02 [$-$0.02, 0.06] & 0.10 [$-$0.09, 0.28] \\
+recognition East Germans & moderate & right & 0.24 & 0.21 & 0.02 [$-$0.02, 0.07] & 0.09 [$-$0.09, 0.28] \\
+\bottomrule
+\end{tabular}
+
+###########################
+# External Validity: Issue-Distance Association by Affiliation 
+###########################
+
+saved figure  figs/issue_weights_party_w2.png
+###########################
+# External Validity: Issue-Distance Association LMM
+###########################
+
+linear mixed-effect model for each issue $q$$(\alpha_q)_{n} = \beta_0 +\beta \cdot lr_n + wave + u_{n} + \epsilon$, (preregistered hypothesis H7).
+
+\begin{tabular}{lccc}
+issue & $\beta_0$ (mean and SE) & $\beta$ (mean and SE) & $p(|\beta|>0)$ \\ \hline
+climate concern & $0.43$ ($\pm 0.02$) & $-0.23$ ($\pm 0.03$) & $<0.001$ *** \\
+gay marriage & $0.43$ ($\pm 0.02$) & $-0.29$ ($\pm 0.03$) & $<0.001$ *** \\
+migrant rights & $0.37$ ($\pm 0.02$) & $-0.10$ ($\pm 0.03$) & $0.002$ ** \\
+economic inequality & $0.34$ ($\pm 0.02$) & $-0.18$ ($\pm 0.03$) & $<0.001$ *** \\
+digital regulation & $0.21$ ($\pm 0.02$) & $-0.02$ ($\pm 0.03$) & $0.389$  \\
+East Germans' recognition & $0.22$ ($\pm 0.01$) & $-0.01$ ($\pm 0.03$) & $0.830$  \\
+\end{tabular}
+
+  climate concern              wave p=0.07 R2=0.03/0.57 converged=True
+  gay marriage                 wave p=0.63 R2=0.05/0.53 converged=True
+  migrant rights               wave p=0.20 R2=0.01/0.53 converged=True
+  economic inequality          wave p=0.55 R2=0.02/0.47 converged=True
+  digital regulation           wave p=0.58 R2=0.00/0.39 converged=True
+  East Germans' recognition    wave p=0.15 R2=0.00/0.40 converged=True
+joint model with interaction effects
+\begin{equation}
+    \alpha_{n,q} = \beta_0 + \beta_1 \, \mathrm{lr}_n + \sum_{q' \neq q_\mathrm{ref}} \beta_{q'} \, \mathbb{I}[q=q'] + \sum_{q' \neq q_\mathrm{ref}} \beta_{\mathrm{lr}\times q'} \, \mathrm{lr}_n \, \mathbb{I}[q=q'] + \beta_\mathrm{wave} \, \mathbb{I}[\mathrm{wave}=2] + u_n + \epsilon_{n,q},
+\end{equation}
+where $u_n \sim \mathcal{N}(0,\sigma_u^2)$ are participant-level random intercepts and $q_\mathrm{ref}$ is digital regulation. Hence $\beta_1$ is the slope of $\mathrm{lr}$ for $q_\mathrm{ref}$, and $\beta_1+\beta_{\mathrm{lr}\times q'}$ is the slope for issue $q'$. 
+The fit parameters are (converged=True):\\
+\begin{tabular}{lccc}
+variable & estimate & SE & p \\ \hline
+$\beta_0$ & 0.20 & 0.02 & <0.001 *** \\
+climate concern & 0.22 & 0.02 & <0.001 *** \\
+East Germans' recognition & 0.00 & 0.02 & 0.896  \\
+economic inequality & 0.13 & 0.02 & <0.001 *** \\
+gay marriage & 0.22 & 0.02 & <0.001 *** \\
+migrant rights & 0.16 & 0.02 & <0.001 *** \\
+lr & -0.00 & 0.03 & 0.945  \\
+wave & 0.01 & 0.00 & 0.036 * \\
+climate concern $\times$ lr & -0.22 & 0.03 & <0.001 *** \\
+East Germans' recognition $\times$ lr & 0.03 & 0.03 & 0.243  \\
+economic inequality $\times$ lr & -0.16 & 0.03 & <0.001 *** \\
+gay marriage $\times$ lr & -0.28 & 0.03 & <0.001 *** \\
+migrant rights $\times$ lr & -0.07 & 0.03 & 0.016 * \\
+\end{tabular}
+
+Interaction test: LRT chi2(5) = 187.97, p = <0.001; N obs = 13557, N participants = 1278
+\begin{tabular}{lcccccc}
+\toprule
+ & \shortstack{climate\\concern} & \shortstack{gay\\marriage} & \shortstack{migrant\\rights} & \shortstack{economic\\inequality} & \shortstack{digital\\regulation} & \shortstack{East German\\recognition} \\
+\midrule
+Intercept (no party) & 0.28 (0.02) & 0.26 (0.02) & 0.31 (0.02) & 0.24 (0.01) & 0.20 (0.01) & 0.22 (0.01) \\
+\midrule
+AfD & 0.06 (0.02)$^\dagger$ & 0.00 (0.02) & 0.07 (0.02)$^{*}$ & 0.03 (0.02) & 0.04 (0.02)$^\dagger$ & 0.04 (0.02)$^\dagger$ \\
+BSW & 0.01 (0.04) & $-$0.05 (0.03) & $-$0.05 (0.04) & $-$0.02 (0.03) & $-$0.06 (0.03) & $-$0.04 (0.03) \\
+CDU/CSU & $-$0.04 (0.02)$^\dagger$ & $-$0.03 (0.02) & $-$0.04 (0.02) & $-$0.04 (0.02)$^\dagger$ & $-$0.04 (0.02)$^\dagger$ & $-$0.01 (0.02) \\
+FDP & $-$0.02 (0.04) & $-$0.03 (0.04) & 0.02 (0.04) & $-$0.03 (0.03) & $-$0.07 (0.03)$^\dagger$ & 0.02 (0.03) \\
+Green Party & 0.16 (0.02)$^{***}$ & 0.16 (0.02)$^{***}$ & 0.09 (0.02)$^{**}$ & 0.08 (0.02)$^{**}$ & 0.05 (0.02)$^\dagger$ & 0.03 (0.02) \\
+Left Party & 0.15 (0.03)$^{***}$ & 0.16 (0.03)$^{***}$ & 0.11 (0.03)$^{**}$ & 0.12 (0.03)$^{***}$ & 0.01 (0.03) & $-$0.02 (0.02) \\
+Other party & $-$0.01 (0.04) & $-$0.03 (0.04) & $-$0.04 (0.04) & 0.00 (0.04) & $-$0.06 (0.04) & $-$0.08 (0.04)$^\dagger$ \\
+Refuse/No answer & 0.05 (0.05) & 0.03 (0.05) & 0.00 (0.05) & 0.05 (0.04) & 0.10 (0.04)$^\dagger$ & $-$0.01 (0.04) \\
+SPD & 0.01 (0.02) & 0.02 (0.02) & $-$0.05 (0.02)$^\dagger$ & 0.00 (0.02) & $-$0.02 (0.02) & $-$0.04 (0.02) \\
+\midrule
+wave 2 & 0.01 (0.01) & 0.00 (0.01) & 0.01 (0.01) & 0.00 (0.01) & 0.00 (0.01) & 0.01 (0.01) \\
+\bottomrule
+\end{tabular}
+
+% n party tests for Holm: 54; converged: True; all intercept p<0.001: True; min wave p: 0.179
+                                                    estimate  ...  p.value
+Intercept                                              0.202  ...    0.000
+C(issue, Treatment('regulate_internet'))[T.clim...     0.089  ...    0.000
+C(issue, Treatment('regulate_internet'))[T.east...     0.024  ...    0.101
+C(issue, Treatment('regulate_internet'))[T.econ...     0.041  ...    0.005
+C(issue, Treatment('regulate_internet'))[T.gay_...     0.066  ...    0.000
+...                                                      ...  ...      ...
+C(party_close, Treatment('Noparty'))[T.GreenPar...     0.033  ...    0.133
+C(party_close, Treatment('Noparty'))[T.LeftPart...     0.093  ...    0.000
+C(party_close, Treatment('Noparty'))[T.Otherpar...     0.014  ...    0.740
+C(party_close, Treatment('Noparty'))[T.Refuseto...    -0.137  ...    0.006
+C(party_close, Treatment('Noparty'))[T.SPD]:C(i...    -0.054  ...    0.011
+
+[61 rows x 3 columns]
+Interaction test: LRT chi2(45) = 322.10, p = <0.001; N obs = 13557, N participants = 1278, converged = True
+###########################
+# External Validity: Issue-Distance Association LMM
+###########################
+
+saved figure  figs/mappingTaskEvaluation.png
+Map Satisfaction
+  count     mean      std  min  25%  50%  75%  max
+1265.0 0.739534 0.189129  0.0 0.61 0.75 0.88  1.0
+1000.0 0.761830 0.184669  0.0 0.64 0.78 0.91  1.0
+PM tool Easier  count      mean      std  min   25%   50%  75%  max
+1265.0 -0.098387 0.569715 -1.0 -0.58 -0.02 0.34  1.0
+1000.0 -0.154080 0.570246 -1.0 -0.66 -0.10 0.28  1.0
+PM tool Enjoy
+  count      mean      std  min   25%   50%  75%  max
+1265.0 -0.092885 0.594336 -1.0 -0.62 -0.02 0.34  1.0
+1000.0 -0.150280 0.584755 -1.0 -0.66 -0.06 0.28  1.0
